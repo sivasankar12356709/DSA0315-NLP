@@ -1,0 +1,26 @@
+import nltk
+from nltk.tokenize import word_tokenize
+from nltk import pos_tag
+from nltk.stem import WordNetLemmatizer
+
+# Download required resources (run once)
+nltk.download('punkt')
+nltk.download('averaged_perceptron_tagger')
+nltk.download('wordnet')
+
+# Input text
+text = "The children are playing happily in the gardens"
+
+# Step 1: Tokenization
+tokens = word_tokenize(text)
+
+# Step 2: Part-of-Speech Tagging
+pos_tags = pos_tag(tokens)
+
+# Step 3: Lemmatization (Morphological Analysis)
+lemmatizer = WordNetLemmatizer()
+
+print("Word\tPOS Tag\tLemma")
+for word, tag in pos_tags:
+    lemma = lemmatizer.lemmatize(word)
+    print(word, "\t", tag, "\t", lemma)
