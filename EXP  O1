@@ -1,0 +1,16 @@
+import re
+
+text = "My email is example123@gmail.com and my phone number is 9876543210."
+
+# Search for an email
+email_pattern = r'\b[\w.-]+@[\w.-]+\.\w+\b'
+email = re.search(email_pattern, text)
+
+if email:
+    print("Email found:", email.group())
+
+# Find all numbers with 10 digits
+phone_pattern = r'\b\d{10}\b'
+phones = re.findall(phone_pattern, text)
+
+print("Phone numbers found:", phones)
