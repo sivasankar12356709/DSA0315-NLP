@@ -1,0 +1,14 @@
+import nltk
+
+grammar = nltk.CFG.fromstring("""
+S -> NP VP
+NP -> 'She'
+VP -> 'eats'
+""")
+
+parser = nltk.ChartParser(grammar)
+
+sentence = "She eats".split()
+
+for tree in parser.parse(sentence):
+    tree.pretty_print()
