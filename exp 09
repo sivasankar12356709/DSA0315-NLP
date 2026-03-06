@@ -1,0 +1,14 @@
+import nltk
+
+patterns = [
+    (r'.*ing$', 'VBG'),
+    (r'.*ed$', 'VBD'),
+    (r'.*s$', 'NNS'),
+    (r'.*', 'NN')
+]
+
+tagger = nltk.RegexpTagger(patterns)
+
+sentence = "Dogs are running quickly".split()
+
+print(tagger.tag(sentence))
