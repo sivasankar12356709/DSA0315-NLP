@@ -1,0 +1,11 @@
+import nltk
+nltk.download('punkt')
+nltk.download('averaged_perceptron_tagger')
+
+text = "Natural language processing is interesting"
+
+words = nltk.word_tokenize(text)
+
+pos_tags = nltk.pos_tag(words)
+
+print(pos_tags)
