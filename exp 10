@@ -1,0 +1,9 @@
+sentence = ["I", "am", "running"]
+
+tags = ["NN"] * len(sentence)
+
+for i, word in enumerate(sentence):
+    if word.endswith("ing"):
+        tags[i] = "VBG"
+
+print(list(zip(sentence, tags)))
