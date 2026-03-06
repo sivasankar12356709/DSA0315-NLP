@@ -1,0 +1,6 @@
+sentence = "How are you?"
+
+if sentence.endswith("?"):
+    print("Question")
+else:
+    print("Statement")
