@@ -1,0 +1,13 @@
+import random
+
+pos_dict = {
+    "dog": ["NN"],
+    "runs": ["VB"],
+    "fast": ["RB"]
+}
+
+sentence = "dog runs fast".split()
+
+for word in sentence:
+    tag = random.choice(pos_dict.get(word, ["NN"]))
+    print(word, "/", tag)
