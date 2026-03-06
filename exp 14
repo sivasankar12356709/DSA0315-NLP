@@ -1,0 +1,7 @@
+subject = "He"
+verb = "runs"
+
+if subject in ["He","She","It"] and verb.endswith("s"):
+    print("Agreement Correct")
+else:
+    print("Agreement Incorrect")
