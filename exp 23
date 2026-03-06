@@ -1,0 +1,4 @@
+text = ["I love NLP", "It is interesting", "Banana eats car"]
+
+for sentence in text:
+    print("Sentence:", sentence)
