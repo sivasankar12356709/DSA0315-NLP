@@ -1,0 +1,4 @@
+expression = "P(x) -> Q(x)"
+
+if "->" in expression:
+    print("Implication detected")
