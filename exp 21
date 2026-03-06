@@ -1,0 +1,11 @@
+import nltk
+
+sentence = "The cat eats fish"
+
+tokens = nltk.word_tokenize(sentence)
+
+tags = nltk.pos_tag(tokens)
+
+noun_phrases = [word for word,pos in tags if pos.startswith("NN")]
+
+print(noun_phrases)
