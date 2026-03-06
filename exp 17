@@ -1,0 +1,6 @@
+from nltk.corpus import wordnet
+
+syn = wordnet.synsets("bank")
+
+for s in syn:
+    print(s.name(), s.definition())
